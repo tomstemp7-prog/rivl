@@ -270,7 +270,7 @@ export default function App() {
   const header = (
     <header className="relative z-[1150] flex items-center gap-3 bg-white px-4 py-3 md:px-6 md:py-4">
       <a
-        href="/"
+        href="./"
         onClick={(e) => {
           e.preventDefault()
           goHome()

@@ -94,3 +94,16 @@ Every event includes `category` and `radius`.
 | below | `#2563C9` | "Below median" pins (blue vs orange stays readable for colour-blind users) |
 
 Type is Inter (Google Fonts). Corners are 12–16px.
+
+## Deploying (GitHub Pages)
+
+`.github/workflows/deploy.yml` builds the site and publishes it to GitHub Pages on every push to `main`.
+
+One-time setup in the repo on GitHub:
+
+1. **Settings → Pages → Build and deployment → Source:** choose **GitHub Actions**.
+2. **Settings → General → Default branch:** set it to `main`.
+
+After that, every push or merge to `main` updates the live site at `https://<your-user>.github.io/rivl/` within a minute or two. You can also run it by hand from the **Actions** tab ("Deploy to GitHub Pages" → Run workflow).
+
+The build uses relative paths (`base: './'` in `vite.config.ts`), so it works at `/rivl/` or on a custom domain without changes.
